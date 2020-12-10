@@ -31,10 +31,11 @@
         Task List
         <br></br>
         <div>
-            <button>Add Task</button>
+            <a href="/insert">Add Task</a>
             <button>Update Task</button>
             <button>Remove Task</button>
         </div>
+        <br></br>
 
         <div>
             <table>

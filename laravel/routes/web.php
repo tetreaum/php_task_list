@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskInsertController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskViewController;
 
@@ -19,5 +20,12 @@ Route::get('/', function () {
 });
 
 Route::get('/', [TaskViewController::class, 'index']);
+
+Route::get('insert', function () {
+    return view('taskinsert');
+});
+
+Route::post('submit', [TaskinsertController::class, 'create']);
+
 
 
