@@ -57,7 +57,7 @@
                     <td>{{ $task->NameAssigned }}</td>
                     <td>{{ $task->DueDate }}</td>
                     <td>{{ $task->StatusType }}</td>
-                    <td>Edit</td>
+                    <td><a href='edit/{{ $task->TaskId }}'>Edit</a></td>
                     <td><a href='delete/{{ $task->TaskId }}'>Delete</a></td>
                 </tr>
                 @endforeach

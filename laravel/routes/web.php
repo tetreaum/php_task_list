@@ -4,6 +4,7 @@ use App\Http\Controllers\TaskInsertController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskViewController;
 use App\Http\Controllers\TaskDeleteController;
+use App\Http\Controllers\TaskUpdateController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,10 @@ Route::get('/', [TaskViewController::class, 'index']);
 Route::get('insert', function () {
     return view('taskinsert');
 });
+
+Route::get('edit/{TaskId}', [TaskUpdateController::class, 'showSelection']);
+
+Route::post('edit/update/{TaskId}', [TaskUpdateController::class, 'update']);
 
 Route::post('submit', [TaskInsertController::class, 'create']);
 
