@@ -32,8 +32,6 @@
         <br></br>
         <div>
             <a href="/insert">Add Task</a>
-            <button>Update Task</button>
-            <button>Remove Task</button>
         </div>
         <br></br>
 
@@ -47,6 +45,8 @@
                     <th>Person Assigned</th>
                     <th>Due Date</th>
                     <th>Status</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
                 @foreach ($tasks as $task)
                 <tr>
@@ -57,6 +57,8 @@
                     <td>{{ $task->NameAssigned }}</td>
                     <td>{{ $task->DueDate }}</td>
                     <td>{{ $task->StatusType }}</td>
+                    <td>Edit</td>
+                    <td><a href='delete/{{ $task->TaskId }}'>Delete</a></td>
                 </tr>
                 @endforeach
             </table>

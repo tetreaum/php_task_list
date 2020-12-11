@@ -3,6 +3,7 @@
 use App\Http\Controllers\TaskInsertController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskViewController;
+use App\Http\Controllers\TaskDeleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,7 @@ Route::get('insert', function () {
     return view('taskinsert');
 });
 
-Route::post('submit', [TaskinsertController::class, 'create']);
+Route::post('submit', [TaskInsertController::class, 'create']);
 
-
+Route::get('delete/{id}',[TaskDeleteController::class, 'delete']);
 
