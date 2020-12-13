@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <!-- Form to insert new task into database -->
     <form action="update/<?php echo $tasks[0]->TaskId; ?>" method="post">
         @csrf
         <label for="TaskDesc">Task Description:</label><br>

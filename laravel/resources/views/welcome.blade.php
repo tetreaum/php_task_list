@@ -35,7 +35,18 @@
         </div>
         <br></br>
 
+        @if ($errors->any())
         <div>
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div><br />
+        @endif
+
+        <div>
+            <!-- Table to display entries in database -->
             <table>
                 <tr>
                     <th>Task ID</th>

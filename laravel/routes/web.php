@@ -17,21 +17,28 @@ use App\Http\Controllers\TaskUpdateController;
 |
 */
 
+//Route to home page
 Route::get('/', function () {
     return view('welcome');
 });
 
+//Route to function to get data from database
 Route::get('/', [TaskViewController::class, 'index']);
 
+//Route to insert task menu
 Route::get('insert', function () {
     return view('taskinsert');
 });
 
+//Route to edit task menu
 Route::get('edit/{TaskId}', [TaskUpdateController::class, 'showSelection']);
 
+//Route to edit task function
 Route::post('edit/update/{TaskId}', [TaskUpdateController::class, 'update']);
 
+//Route to submitting new task
 Route::post('submit', [TaskInsertController::class, 'create']);
 
+//Route to delete task
 Route::get('delete/{id}',[TaskDeleteController::class, 'delete']);
 

@@ -6,6 +6,7 @@
 </head>
 
 <body>
+    <!-- Form to add new entry -->
     <form action="submit" method="post">
         @csrf
         <label for="TaskDesc">Task Description:</label><br>
